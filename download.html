@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Download Sill for Mac, the free companion to the Sill app for iPhone and iPad.">
+<title>Download Sill for Mac</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="icon.svg" alt="" width="30" height="30">Sill</a>
+  <nav aria-label="Site">
+    <a href="download.html" aria-current="page">Download</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Sill for Mac</h1>
+  <p class="lede">Sill for Mac shares your windows with the Sill app on your iPhone and iPad. It’s free, and you get it here, not from the Mac App Store.</p>
+
+  <!-- The current release. Scripts/release.sh prints all three values at the end of a run:
+       set them here on every release (docs/release-checklist.md). -->
+  <section class="card" aria-labelledby="release">
+    <h2 id="release">First release</h2>
+    <p class="muted">For Mac computers with Apple silicon, on macOS 14 or later.</p>
+    <p class="small">The first public build of Sill for Mac is being prepared. The download and its checksum will appear here when it is ready.</p>
+  </section>
+
+  <h2>Install</h2>
+  <ol class="steps">
+    <li>Double-click the download to unzip it, if your browser hasn’t already.</li>
+    <li>Drag Sill to your Applications folder.</li>
+    <li>Open Sill from your Applications folder.</li>
+  </ol>
+  <p>Sill is notarized: Apple has checked it for malicious software, so it opens with a double-click. The first time, macOS asks whether you want to open an app you downloaded from the internet. Click Open.</p>
+
+  <h2>The first time you open it</h2>
+  <p>Sill lives in the menu bar at the top of your screen, not in the Dock. It opens its settings on Permissions and asks for two things:</p>
+  <ul>
+    <li><strong>Screen Recording</strong>, so it can show the windows you pick on your iPhone or iPad. Nothing is recorded or saved. After you allow it, macOS offers to quit and reopen Sill. Choose Quit &amp; Reopen.</li>
+    <li><strong>Accessibility</strong>, so your iPhone or iPad can click, scroll and type on your Mac, and so Sill can move and size the window it shows.</li>
+  </ul>
+  <p>If macOS asks whether Sill can find devices on your local network, click Allow. Then open Sill on your iPhone or iPad and tap your Mac.</p>
+
+  <h2>Check the download</h2>
+  <p>To make sure your copy is the one published here, open Terminal, type <code>shasum -a 256</code> and a space, drag the zip into the window and press Return. It should print the same SHA-256 as above.</p>
+
+  <h2>Update</h2>
+  <p>Sill doesn’t update itself. To update, quit Sill from its menu, download the new version here and replace the old one in your Applications folder. Your settings and permissions stay.</p>
+
+  <h2>Uninstall</h2>
+  <p>Quit Sill from its menu and move it to the Trash. The <a href="privacy.html#deleting">privacy policy</a> says how to remove the settings and log it leaves behind.</p>
+</main>
+
+<footer class="site-footer">
+  <nav aria-label="Footer">
+    <a href="index.html">Home</a>
+    <a href="download.html">Download</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </nav>
+</footer>
+</body>
+</html>

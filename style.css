@@ -1,0 +1,189 @@
+/* Sill's website. System fonts, light and dark, no scripts and nothing loaded from elsewhere. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --card: #f5f5f7;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --line: #d2d2d7;
+  --link: #0066cc;
+  --button: #0071e3;
+  --button-hover: #0077ed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --card: #1c1c1e;
+    --text: #f5f5f7;
+    --muted: #a1a1a6;
+    --line: #38383a;
+    --link: #2997ff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+
+.site-header, main, .site-footer {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 4px; }
+
+/* Header and footer */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+.brand:hover { text-decoration: none; }
+.brand img { width: 30px; height: 30px; border-radius: 22.5%; }
+
+.site-header nav, .site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+.site-header nav a { color: var(--text); }
+.site-header nav a[aria-current="page"] { color: var(--muted); }
+
+.site-footer {
+  margin-top: 64px;
+  padding-bottom: 40px;
+  font-size: 0.875rem;
+}
+/* The rule sits on the nav, so it lines up with the text above instead of the page's gutters. */
+.site-footer nav {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+/* Text */
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 32px 0 12px;
+}
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 44px 0 10px;
+}
+h3 {
+  font-size: 1.05rem;
+  margin: 24px 0 6px;
+}
+
+p, ul, ol { margin: 0 0 14px; }
+ul, ol { padding-left: 1.4em; }
+li { margin: 6px 0; }
+
+.lede { font-size: 1.2rem; line-height: 1.5; }
+.muted { color: var(--muted); }
+.small { font-size: 0.875rem; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--card);
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+/* A SHA-256 is 64 characters with no spaces: let it wrap on a phone instead of widening the page. */
+.hash code { overflow-wrap: anywhere; word-break: break-all; }
+
+/* Home */
+
+.hero { text-align: center; padding-top: 24px; }
+.hero img { width: 112px; height: 112px; border-radius: 22.5%; }
+.hero h1 { font-size: 3rem; margin-top: 16px; }
+.hero .lede { font-size: 1.35rem; margin-bottom: 0; }
+.intro { font-size: 1.1rem; margin-top: 40px; }
+
+/* Buttons and the release box */
+
+.button {
+  display: inline-block;
+  background: var(--button);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 980px;
+}
+.button:hover { background: var(--button-hover); text-decoration: none; }
+.button:focus-visible { outline-offset: 3px; border-radius: 980px; }
+
+.cta { margin: 28px 0 8px; }
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px 22px 8px;
+  margin: 24px 0;
+}
+.card h2 { margin-top: 0; }
+
+/* Numbered steps */
+
+ol.steps {
+  list-style: none;
+  counter-reset: step;
+  padding-left: 0;
+}
+ol.steps > li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 44px;
+  margin: 14px 0;
+  min-height: 30px;
+}
+ol.steps > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 30px;
+  text-align: center;
+}

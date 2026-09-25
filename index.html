@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Sill shows windows from your Mac on your iPhone and iPad. Free, with no account and no servers.">
+<title>Sill: windows from your Mac on your iPhone and iPad</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="icon.svg" alt="" width="30" height="30">Sill</a>
+  <nav aria-label="Site">
+    <a href="download.html">Download</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <img src="icon.svg" alt="" width="112" height="112">
+    <h1>Sill</h1>
+    <p class="lede">Any window from your Mac, on your iPhone and iPad.</p>
+    <p class="cta"><a class="button" href="download.html">Download Sill for Mac</a></p>
+    <p class="muted small">Free. For Mac computers with Apple silicon, on macOS 14 or later.</p>
+  </section>
+
+  <p class="intro">Sill shows a window from your Mac, or its whole desktop, on your iPhone or iPad, and lets you use it with touch, a keyboard or Apple Pencil. It streams straight from your Mac to your device over your own network, so there is no account to create and no server in between. Both parts are free: the Sill app for iPhone and iPad, and Sill for Mac.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li>A Mac with Apple silicon, on macOS 14 or later. When Sill first opens, you allow it Screen Recording and Accessibility.</li>
+    <li>An iPhone or iPad with iOS 17 or iPadOS 17 or later, on the same network as your Mac.</li>
+    <!-- Remote Access: take this item out for a release without Remote Access. -->
+    <li>Away from home, your own VPN, such as Tailscale, with Remote Access turned on in Sill.</li>
+    <!-- /Remote Access -->
+  </ul>
+  <p>No shared network? Connect your iPhone or iPad to your Mac with a USB cable, or turn on Direct Wireless Connection in Sill on your Mac.</p>
+
+  <h2>Connect in four steps</h2>
+  <ol class="steps">
+    <li><a href="download.html">Download Sill for Mac</a>, drag it to your Applications folder and open it. Sill lives in the menu bar.</li>
+    <li>Allow Screen Recording and Accessibility when Sill asks. When macOS offers Quit &amp; Reopen, choose it.</li>
+    <!-- Once the app is live, link "App Store" here to its page. -->
+    <li>Get Sill from the App Store on your iPhone or iPad. Open it and allow Local Network.</li>
+    <li>Tap your Mac. Its desktop appears, and you can pick any window from the bar.</li>
+  </ol>
+
+  <!-- Remote Access: take this section out for a release without Remote Access. -->
+  <h2>Away from home</h2>
+  <p>With Remote Access on, Sill reaches your Mac through your own VPN, such as Tailscale, or through a port you forward on your router. Pair each iPhone or iPad once: on your Mac, choose Pair iPhone or iPad… in the Sill menu, and on your device, tap Add a Mac… and point it at the code. Only devices you pair can connect this way, and the connection is encrypted.</p>
+  <!-- /Remote Access -->
+
+  <h2>Free, with no tracking</h2>
+  <p>Sill is free. It has no ads, no tracking and no account, and it never sends anything to its developer. The <a href="privacy.html">privacy policy</a> has the details.</p>
+  <!-- Once Saffsanity/sill is public with a LICENSE file, and not before: make the heading "Free and open source", start the paragraph with "Sill is free and open source.", and add: <p>The source code is on <a href="https://github.com/Saffsanity/sill">GitHub</a>.</p> -->
+</main>
+
+<footer class="site-footer">
+  <nav aria-label="Footer">
+    <a href="index.html">Home</a>
+    <a href="download.html">Download</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </nav>
+</footer>
+</body>
+</html>

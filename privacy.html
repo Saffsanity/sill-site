@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Sill’s privacy policy: Sill collects nothing, and your screen and input travel only between your own devices.">
+<title>Sill Privacy Policy</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="icon.svg" alt="" width="30" height="30">Sill</a>
+  <nav aria-label="Site">
+    <a href="download.html">Download</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="muted">Last updated September 25, 2026</p>
+
+  <p class="lede">Sill collects nothing. There is no account and no server: your screen and what you type travel only between your own devices, and nothing about you ever reaches the developer.</p>
+
+  <p>This policy covers the Sill app for iPhone and iPad and Sill for Mac.</p>
+
+  <h2>The short version</h2>
+  <ul>
+    <li>No account and no sign-in.</li>
+    <li>No analytics, ads or tracking, and no code from third parties (SDKs) in either app.</li>
+    <li>No servers. Sill on your iPhone or iPad talks only to Sill on your own Mac.</li>
+  </ul>
+
+  <h2>What travels between your devices</h2>
+  <p>Sill connects your iPhone or iPad straight to your own Mac, in one of these ways:</p>
+  <ul>
+    <li>over your local network, such as your Wi-Fi at home;</li>
+    <li>over a USB cable between the two;</li>
+    <li>over peer-to-peer Wi-Fi, when Direct Wireless Connection is on;</li>
+    <!-- Remote Access: take this item out for a release without Remote Access. -->
+    <li>through your own VPN, or a port you forward on your router, when Remote Access is on.</li>
+    <!-- /Remote Access -->
+  </ul>
+  <p>Nothing is sent to the developer.</p>
+
+  <h3>From your Mac to your iPhone or iPad</h3>
+  <ul>
+    <li>The picture of the window you pick, or of your desktop.</li>
+    <li>The name of your Mac, its open windows with their titles and small previews, and the apps installed on it with their icons.</li>
+    <li>The shape of the pointer, and Sill’s streaming settings.</li>
+  </ul>
+
+  <h3>From your iPhone or iPad to your Mac</h3>
+  <ul>
+    <li>Your taps, clicks, scrolls, keys and typed text.</li>
+    <li>Which window to show, which app to open, and window commands such as close or minimize.</li>
+    <li>The size of the area that shows your Mac, and the scale and frame rate it wants.</li>
+    <li>Changes you make in Sill’s settings panel.</li>
+    <li>While it’s connected, once a second, a short report: the frame rate, how long frames and replies took, and the device’s name and model, such as “iPad (iPad14,1)”. iOS gives apps a generic name like “iPad”, not the name you gave your device.</li>
+  </ul>
+
+  <!-- Remote Access: take this paragraph out for a release without Remote Access. -->
+  <p>When you pair a device for Remote Access, your Mac and the device also exchange their names, the device’s model, their public keys and the addresses your Mac can be reached at, such as its VPN address. The device keeps these so it can connect again later.</p>
+  <!-- /Remote Access -->
+
+  <!-- Remote Access: take this paragraph out for a release without Remote Access. -->
+  <p>Connections through Remote Access are encrypted with TLS 1.3, and only devices you have paired can make them.</p>
+  <!-- /Remote Access -->
+  <p>Connections on your local network, over the cable and over Direct Wireless Connection are not encrypted.</p>
+
+  <h2>Who can connect</h2>
+  <p>At home, Sill trusts your network. While Sill runs on your Mac, any iPhone or iPad on the same network that has Sill can connect to your Mac, see it and control it. So can one nearby while Direct Wireless Connection is on. Use Sill on networks you trust.</p>
+  <!-- Remote Access: take this paragraph out for a release without Remote Access. -->
+  <p>Remote Access lets in only the devices you pair, and you can remove any of them on your Mac.</p>
+  <!-- /Remote Access -->
+
+  <h2>What stays on your devices</h2>
+  <p>Each app keeps a few things on the device it runs on. None of it is sent anywhere.</p>
+  <h3>On your iPhone or iPad</h3>
+  <ul>
+    <li>For each Mac, the order you put its windows in.</li>
+    <li>The names of Mac computers it has seen with Direct Wireless Connection on, so it knows to look for them nearby.</li>
+    <!-- Remote Access: take these two items out for a release without Remote Access. -->
+    <li>Your saved Mac computers for Remote Access: each one’s name, addresses and key.</li>
+    <li>This device’s pairing key, in its keychain. The key never leaves the device and isn’t included in backups.</li>
+    <!-- /Remote Access -->
+  </ul>
+  <h3>On your Mac</h3>
+  <ul>
+    <li>Sill’s settings.</li>
+    <li>A log of what Sill did, in the Library/Logs/Sill folder in your home folder. It includes window and app names, device names and network addresses. It stays on your Mac unless you send it to someone, and Sill keeps at most two log files of 10 MB each.</li>
+    <!-- Remote Access: take this item out for a release without Remote Access. -->
+    <li>Its Remote Access key and the list of devices you paired, in your login keychain, and when each of them last connected.</li>
+    <!-- /Remote Access -->
+  </ul>
+
+  <h2>Permissions</h2>
+  <h3>On your Mac</h3>
+  <ul>
+    <li><strong>Screen Recording</strong>, to show the windows you pick on your iPhone or iPad. Nothing is recorded or saved.</li>
+    <li><strong>Accessibility</strong>, so your iPhone or iPad can click, scroll and type on your Mac, and so Sill can move and size the window it shows.</li>
+    <li><strong>Local Network</strong>, so your iPhone and iPad can find your Mac.</li>
+  </ul>
+  <h3>On your iPhone or iPad</h3>
+  <ul>
+    <li><strong>Local Network</strong>, to find your Mac and connect to it.</li>
+    <!-- Remote Access: take this item out for a release without Remote Access. -->
+    <li><strong>Camera</strong>, only to scan the pairing code your Mac shows. Nothing the camera sees is saved or sent.</li>
+    <!-- /Remote Access -->
+  </ul>
+  <p>You can turn any of these off at any time: in System Settings › Privacy &amp; Security on your Mac, and in Settings › Privacy &amp; Security on your iPhone or iPad.</p>
+
+  <h2 id="deleting">Deleting your data</h2>
+  <p>The developer holds no data about you, so there is nothing to ask for or delete on the developer’s side. To remove what Sill keeps on your devices:</p>
+  <ul>
+    <li>On your iPhone or iPad, delete the Sill app. What it kept goes with it.</li>
+    <!-- Remote Access: take this item out for a release without Remote Access. -->
+    <li>To forget one Mac you paired, touch and hold its row on the connect screen and choose Forget.</li>
+    <!-- /Remote Access -->
+    <li>On your Mac, quit Sill and move it to the Trash. Delete the Sill folder in Library/Logs in your home folder. To remove its settings, run <code>defaults delete me.saffer.sill.mac</code> in Terminal.</li>
+    <!-- Remote Access: take this item out for a release without Remote Access. -->
+    <li>If you used Remote Access, also open Keychain Access and delete the key “Sill Remote Access” and the passwords for “me.saffer.sill.remote”.</li>
+    <!-- /Remote Access -->
+  </ul>
+
+  <h2>Changes</h2>
+  <p>When this policy changes, this page changes with it, and the date at the top says when.</p>
+
+  <h2>Contact</h2>
+  <p>Sill is made by Noah Saffer. For questions about privacy, email <a href="mailto:support@getsill.app">support@getsill.app</a>.</p>
+</main>
+
+<footer class="site-footer">
+  <nav aria-label="Footer">
+    <a href="index.html">Home</a>
+    <a href="download.html">Download</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </nav>
+</footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Help with Sill: permissions, finding your Mac, Direct Wireless Connection and more, and how to get in touch.">
+<title>Sill Support</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="icon.svg" alt="" width="30" height="30">Sill</a>
+  <nav aria-label="Site">
+    <a href="download.html">Download</a>
+    <a href="support.html" aria-current="page">Support</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Support</h1>
+  <p class="lede">Most problems have a quick fix below. If yours doesn’t, email <a href="mailto:support@getsill.app">support@getsill.app</a>. Say which Mac and which iPhone or iPad you use, their system versions, and what happened.</p>
+  <!-- Once the repository is public, add: <p>You can also report a problem on <a href="https://github.com/Saffsanity/sill/issues">GitHub</a>.</p> -->
+  <p>Need Sill for Mac? <a href="download.html">Download it here</a>.</p>
+
+  <h2 id="screen-recording">Sill can’t see your windows</h2>
+  <p>The Sill menu on your Mac says Screen Recording Is Off, or your iPhone or iPad connects but shows no windows.</p>
+  <ol>
+    <li>On your Mac, open System Settings › Privacy &amp; Security › Screen &amp; System Audio Recording. On macOS 14, it’s called Screen Recording.</li>
+    <li>Turn on Sill.</li>
+    <li>Quit Sill and open it again. macOS offers to do this for you.</li>
+  </ol>
+  <p>In Sill’s settings, Permissions has buttons that open these pages for you.</p>
+
+  <h2 id="accessibility">Taps and typing don’t reach your Mac</h2>
+  <p>Sill needs Accessibility to click, scroll and type for you. On your Mac, open System Settings › Privacy &amp; Security › Accessibility and turn on Sill. It works right away.</p>
+
+  <h2 id="mac-not-listed">Your Mac isn’t listed</h2>
+  <ul>
+    <li>Check that Sill is running on your Mac. Its icon is in the menu bar.</li>
+    <li>Put your Mac and your iPhone or iPad on the same Wi-Fi network. Guest networks, and many office and hotel networks, keep devices apart. There, use a USB cable or Direct Wireless Connection.</li>
+    <li>Connect your iPhone or iPad to your Mac with a USB cable. Your Mac then shows as Wired.</li>
+    <li>Check that Local Network is on for Sill on both, as below.</li>
+  </ul>
+
+  <h2 id="local-network">Local Network is off</h2>
+  <p>If Sill on your iPhone or iPad asks you to allow Local Network, open Settings › Privacy &amp; Security › Local Network and turn on Sill.</p>
+  <p>On a Mac with macOS 15 or later, also open System Settings › Privacy &amp; Security › Local Network and turn on Sill.</p>
+
+  <h2 id="direct-wireless">Direct Wireless Connection</h2>
+  <p>Direct Wireless Connection lets an iPhone or iPad near your Mac connect without a shared Wi-Fi network, the way AirDrop does.</p>
+  <ul>
+    <li>Turn it on in the Sill menu on your Mac, or in Sill’s settings under General.</li>
+    <li>If your Mac isn’t listed on your iPhone or iPad, tap Search Nearby. Your Mac then shows as Direct.</li>
+    <li>Leave it off when your devices share a network. While it’s on, the Wi-Fi on your Mac keeps stepping away from its network, and streams over Wi-Fi can stutter.</li>
+    <li>While it’s on, anyone nearby with Sill can find your Mac and connect to it.</li>
+  </ul>
+
+  <!-- Remote Access: take this section out for a release without Remote Access. -->
+  <h2 id="remote-access">Remote Access</h2>
+  <p>Remote Access lets you use your Mac away from home, through your own VPN, such as Tailscale, or through a port you forward on your router. Only devices you pair can connect this way, and the connection is encrypted.</p>
+  <ol>
+    <li>On your Mac, choose Remote Access… in the Sill menu and turn on Remote Access.</li>
+    <li>Pair each iPhone or iPad once. On your Mac, choose Pair iPhone or iPad… in the Sill menu. On your device, tap Add a Mac… and point it at the code.</li>
+    <li>Away from home, turn on your VPN on your device and tap your Mac.</li>
+  </ol>
+  <p>If it doesn’t connect:</p>
+  <ul>
+    <li>Your Mac has to be awake, with Sill running and its VPN on. Sill can’t wake a sleeping Mac. To keep it reachable, stop it from sleeping in System Settings › Energy, or Battery on a laptop.</li>
+    <li>Check that your VPN is on on your iPhone or iPad too.</li>
+    <li>If your device says your Mac no longer accepts it, it was removed on your Mac. Pair it again.</li>
+  </ul>
+  <!-- /Remote Access -->
+
+  <h2 id="stutter">The picture stutters or lags</h2>
+  <ul>
+    <li>Pick a lower Quality in the Sill menu on your Mac, or in the settings panel on your iPhone or iPad.</li>
+    <li>Use a USB cable, or 5 GHz Wi-Fi.</li>
+    <li>Turn off Direct Wireless Connection if you don’t need it.</li>
+  </ul>
+
+  <h2 id="log">Sending a log</h2>
+  <p>A log helps with problems that aren’t listed here. On your Mac, choose Show Log… in the Sill menu, or open the Sill folder in Library/Logs in your home folder. The log lists your window names, device names and network addresses, so read it before you send it.</p>
+</main>
+
+<footer class="site-footer">
+  <nav aria-label="Footer">
+    <a href="index.html">Home</a>
+    <a href="download.html">Download</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </nav>
+</footer>
+</body>
+</html>
