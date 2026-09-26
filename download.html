@@ -28,7 +28,8 @@
   <section class="card" aria-labelledby="release">
     <h2 id="release">Latest release</h2>
     <p class="muted">For Mac computers with Apple silicon, on macOS 14 or later.</p>
-    <p class="small">The first public build of Sill for Mac is being prepared. The download and its checksum will appear here when it is ready.</p>
+    <p><a class="button" href="https://github.com/Saffsanity/sill/releases/latest/download/Sill.zip">Download Sill for Mac</a></p>
+    <p class="hash small">The version is in the release’s name on <a href="https://github.com/Saffsanity/sill/releases/latest">GitHub</a>, with the checksum file <a href="https://github.com/Saffsanity/sill/releases/latest/download/Sill.zip.sha256">Sill.zip.sha256</a> beside the download.</p>
   </section>
 
   <h2>Install</h2>
@@ -45,10 +46,11 @@
     <li><strong>Screen Recording</strong>, so it can show the windows you pick on your iPhone or iPad. Nothing is recorded or saved. After you allow it, macOS offers to quit and reopen Sill. Choose Quit &amp; Reopen.</li>
     <li><strong>Accessibility</strong>, so your iPhone or iPad can click, scroll and type on your Mac, and so Sill can move and size the window it shows.</li>
   </ul>
-  <p>If macOS asks whether Sill can find devices on your local network, click Allow. Then open Sill on your iPhone or iPad and tap your Mac.</p>
+  <!-- Once the iPhone and iPad app is live, drop the sentence after "tap your Mac." -->
+  <p>If macOS asks whether Sill can find devices on your local network, click Allow. Then open Sill on your iPhone or iPad and tap your Mac. Sill for iPhone and iPad is on its way to the App Store; until it is there, you can build it from <a href="https://github.com/Saffsanity/sill#building-from-source">its source code</a>.</p>
 
   <h2>Check the download</h2>
-  <p>To make sure your copy is the one published here, open Terminal, type <code>shasum -a 256</code> and a space, drag the zip into the window and press Return. It should print the same SHA-256 as above.</p>
+  <p>To make sure your copy is the one published here, open Terminal, type <code>shasum -a 256</code> and a space, drag the zip into the window and press Return. It should print the same SHA-256 as the release’s notes on GitHub and the Sill.zip.sha256 file above.</p>
 
   <h2>Update</h2>
   <p>Sill doesn’t update itself, but it tells you when a new version is out: its menu and Settings say so, with a link to the release. To update, quit Sill from its menu, download the new version here and replace the old one in your Applications folder. Your settings and permissions stay.</p>
