@@ -32,6 +32,7 @@
     <li>No account and no sign-in.</li>
     <li>No analytics, ads or tracking, and no code from third parties (SDKs) in either app.</li>
     <li>No servers. Sill on your iPhone or iPad talks only to Sill on your own Mac.</li>
+    <li>Once a day Sill for Mac asks GitHub whether a newer version is out. Sill sends only its version number and a fixed language (“en”), and GitHub sees the IP address of your Mac, as with any website. You can turn this off.</li>
   </ul>
 
   <h2>What travels between your devices</h2>
@@ -60,6 +61,7 @@
     <li>The size of the area that shows your Mac, and the scale and frame rate it wants.</li>
     <li>Changes you make in Sill’s settings panel.</li>
     <li>While it’s connected, once a second, a short report: the frame rate, how long frames and replies took, and the device’s name and model, such as “iPad (iPad14,1)”. iOS gives apps a generic name like “iPad”, not the name you gave your device.</li>
+    <li>When it connects, which version of Sill it runs, so your Mac can say when the app needs an update to keep working with it.</li>
   </ul>
 
   <!-- Remote Access: take this paragraph out for a release without Remote Access. -->
@@ -76,6 +78,10 @@
   <!-- Remote Access: take this paragraph out for a release without Remote Access. -->
   <p>Remote Access lets in only the devices you pair, and you can remove any of them on your Mac.</p>
   <!-- /Remote Access -->
+
+  <h2>Update check</h2>
+  <p>Sill for Mac checks for updates. Unless you turn off “Check for updates automatically” in Sill’s Settings › General, once a day it asks GitHub (api.github.com) whether a newer version of Sill has been released, and again whenever you click Check Now. Like any visit to a website, that request shows GitHub the IP address of your Mac, and it says which version of Sill you have (for example “Sill/1.0”) and gives a fixed “en” as its language. Sill sends nothing else: no identifiers, no cookies, nothing about your devices or what you stream. The developer receives nothing from these checks; GitHub’s privacy statement covers what GitHub keeps. Sill never downloads or installs anything by itself.</p>
+  <p>The iPhone and iPad app checks for nothing: the App Store updates it. It does tell your Mac which version of Sill it runs when it connects, so that your Mac can say when the app needs an update to keep working with it.</p>
 
   <h2>What stays on your devices</h2>
   <p>Each app keeps a few things on the device it runs on. None of it is sent anywhere.</p>
@@ -139,6 +145,8 @@
     <a href="download.html">Download</a>
     <a href="privacy.html">Privacy</a>
     <a href="support.html">Support</a>
+    <a href="https://github.com/Saffsanity/sill">Source on GitHub</a>
+    <a href="https://github.com/Saffsanity/sill-site">This site on GitHub</a>
   </nav>
 </footer>
 </body>
