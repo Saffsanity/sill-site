@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Help with Sill: permissions, finding your Mac, Direct Wireless Connection and more, and how to get in touch.">
+<meta name="description" content="Help with Sill: permissions, finding your Mac, pairing, Direct Wireless Connection and more, and how to get in touch.">
 <title>Sill Support</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -49,27 +49,45 @@
   <p>If Sill on your iPhone or iPad asks you to allow Local Network, open Settings › Privacy &amp; Security › Local Network and turn on Sill.</p>
   <p>On a Mac with macOS 15 or later, also open System Settings › Privacy &amp; Security › Local Network and turn on Sill.</p>
 
+  <h2 id="pairing">Pairing your iPhone or iPad</h2>
+  <p>Each iPhone or iPad pairs with your Mac once. After that, only the devices you paired can connect, and every connection is encrypted.</p>
+  <ol>
+    <li>On your iPhone or iPad, tap your Mac. Its row says Not paired.</li>
+    <li>Your Mac opens a window with a code. Point your iPhone or iPad at it, or tap Enter Code Instead and type the 12 digits.</li>
+  </ol>
+  <p>Over a USB cable, your Mac shows as Wired. Tap it, and the device pairs by itself, with no code, while your Mac is unlocked.</p>
+  <p>If it doesn’t work:</p>
+  <ul>
+    <li><strong>Your Mac didn’t show a code.</strong> Choose Pair iPhone or iPad… in the Sill menu on your Mac, then tap your Mac again. After you click Cancel in that window, or after five wrong codes, your Mac waits 10 minutes before it opens the window for that device by itself again.</li>
+    <li><strong>Your iPhone or iPad asks you to unlock your Mac.</strong> Your Mac pairs a device only while it’s unlocked.</li>
+    <li><strong>Your iPhone or iPad says Update Sill beside your Mac.</strong> Your Mac has Sill for Mac 0.3.1 or earlier, from before pairing. Update it: <a href="download.html">download the newest version</a>, or choose the item in the Sill menu that says a newer version is available.</li>
+    <li><strong>The Sill menu on your Mac says An iPhone or iPad Needs Sill Updated.</strong> An iPhone or iPad with an older Sill tried to connect. Update Sill on it.</li>
+    <li><strong>Your iPhone or iPad says your Mac removed it.</strong> It was removed in Sill’s Settings › Devices on your Mac. Tap your Mac to pair it again.</li>
+  </ul>
+  <p>Sill’s Settings › Devices on your Mac lists the devices you paired. Remove one you no longer use, or have lost. Leave Require pairing on: with it off, any device on your network, and any app on your Mac, can see and control your Mac without pairing.</p>
+
   <h2 id="direct-wireless">Direct Wireless Connection</h2>
   <p>Direct Wireless Connection lets an iPhone or iPad near your Mac connect without a shared Wi-Fi network, the way AirDrop does.</p>
   <ul>
     <li>Turn it on in the Sill menu on your Mac, or in Sill’s settings under General.</li>
     <li>If your Mac isn’t listed on your iPhone or iPad, tap Search Nearby. Your Mac then shows as Direct.</li>
     <li>Leave it off when your devices share a network. While it’s on, the Wi-Fi on your Mac keeps stepping away from its network, and streams over Wi-Fi can stutter.</li>
-    <li>While it’s on, anyone nearby with Sill can find your Mac and connect to it.</li>
+    <li>While it’s on, anyone nearby with Sill can find your Mac. Only devices you paired can connect, unless you turn off Require pairing.</li>
   </ul>
 
   <!-- Remote Access: take this section out for a release without Remote Access. -->
   <h2 id="remote-access">Remote Access</h2>
-  <p>Remote Access lets you use your Mac away from home, through your own VPN, such as Tailscale, or through a port you forward on your router. Only devices you pair can connect this way, and the connection is encrypted.</p>
+  <p>Remote Access lets you use your Mac away from home, through your own VPN, such as Tailscale, or through a port you forward on your router. Only devices you paired can connect this way, and the connection is encrypted.</p>
   <ol>
     <li>On your Mac, choose Remote Access… in the Sill menu and turn on Remote Access.</li>
-    <li>Pair each iPhone or iPad once. On your Mac, choose Pair iPhone or iPad… in the Sill menu. On your device, tap Add a Mac… and point it at the code.</li>
+    <li>Pair each iPhone or iPad once, at home (above), and connect it to your Mac at home once while Remote Access is on: that is how it learns where to find your Mac from other networks. A device that has never connected at home: on your Mac, choose Pair iPhone or iPad… in the Sill menu, then on your device, tap Add a Mac… and point it at the code.</li>
     <li>Away from home, turn on your VPN on your device and tap your Mac.</li>
   </ol>
   <p>If it doesn’t connect:</p>
   <ul>
     <li>Your Mac has to be awake, with Sill running and its VPN on. Sill can’t wake a sleeping Mac. To keep it reachable, stop it from sleeping in System Settings › Energy, or Battery on a laptop.</li>
     <li>Check that your VPN is on on your iPhone or iPad too.</li>
+    <li>If your iPhone or iPad says your Mac didn’t answer although your Mac is awake, connect them at home once with Remote Access on, then try again away.</li>
     <li>If your device says your Mac no longer accepts it, it was removed on your Mac. Pair it again.</li>
   </ul>
   <!-- /Remote Access -->

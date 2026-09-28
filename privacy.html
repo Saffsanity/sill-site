@@ -21,7 +21,7 @@
 
 <main>
   <h1>Privacy Policy</h1>
-  <p class="muted">Last updated September 25, 2026</p>
+  <p class="muted">Last updated September 27, 2026</p>
 
   <p class="lede">Sill collects nothing. There is no account and no server: your screen and what you type travel only between your own devices, and nothing about you ever reaches the developer.</p>
 
@@ -51,32 +51,35 @@
   <ul>
     <li>The picture of the window you pick, or of your desktop.</li>
     <li>The name of your Mac, its open windows with their titles and small previews, and the apps installed on it with their icons.</li>
-    <li>The shape of the pointer, and Sill’s streaming settings.</li>
+    <li>The menus of the app you’re using, read from its menu bar: their titles while you’re connected, and a menu’s items, with their shortcuts and which ones are checked or turned off, when you open that menu on your iPhone or iPad.</li>
+    <li>The shape of the pointer and, while it is over what you’re looking at, where it is.</li>
+    <li>Sill’s streaming settings.</li>
   </ul>
 
   <h3>From your iPhone or iPad to your Mac</h3>
   <ul>
-    <li>Your taps, clicks, scrolls, keys and typed text.</li>
+    <li>Your taps, clicks, scrolls, three-finger gestures, keys and typed text.</li>
     <li>Which window to show, which app to open, and window commands such as close or minimize.</li>
     <li>The size of the area that shows your Mac, and the scale and frame rate it wants.</li>
     <li>Changes you make in Sill’s settings panel.</li>
+    <li>Which of the app’s menus to show, and the menu items you choose.</li>
     <li>While it’s connected, once a second, a short report: the frame rate, how long frames and replies took, and the device’s name and model, such as “iPad (iPad14,1)”. iOS gives apps a generic name like “iPad”, not the name you gave your device.</li>
     <li>When it connects, which version of Sill it runs, so your Mac can say when the app needs an update to keep working with it.</li>
   </ul>
 
-  <!-- Remote Access: take this paragraph out for a release without Remote Access. -->
-  <p>When you pair a device for Remote Access, your Mac and the device also exchange their names, the device’s model, their public keys and the addresses your Mac can be reached at, such as its VPN address. The device keeps these so it can connect again later.</p>
-  <!-- /Remote Access -->
+  <p>When you pair a device, your Mac and the device exchange their names, the device’s model and their public keys, and each keeps what it needs to recognize the other and to connect again later. When a device connects over a USB cable, your Mac also reads its serial number and keeps only a code made from it, never the number itself: the code lets your Mac recognize that iPhone or iPad the next time it is on the cable, so that the cable never pairs a second key for the same device by itself.</p>
 
   <!-- Remote Access: take this paragraph out for a release without Remote Access. -->
-  <p>Connections through Remote Access are encrypted with TLS 1.3, and only devices you have paired can make them.</p>
+  <p>While Remote Access is on, your Mac also tells the devices you paired the addresses it can be reached at from other networks, such as its VPN address, and they keep them to connect from there.</p>
   <!-- /Remote Access -->
-  <p>Connections on your local network, over the cable and over Direct Wireless Connection are not encrypted.</p>
+
+  <p>Every connection between your devices and your Mac is encrypted with TLS 1.3. Once a device is paired, each end also checks that the other holds the key it paired with.</p>
 
   <h2>Who can connect</h2>
-  <p>At home, Sill trusts your network. While Sill runs on your Mac, any iPhone or iPad on the same network that has Sill can connect to your Mac, see it and control it. So can one nearby while Direct Wireless Connection is on. Use Sill on networks you trust.</p>
+  <p>Only the iPhones and iPads you pair can connect to your Mac. You pair each one once: your Mac shows a code for the device to scan or type, or, over a USB cable while your Mac is unlocked, the device pairs by itself. You can remove any of them in Sill’s Settings › Devices on your Mac.</p>
+  <p>If you turn off Require pairing there, any iPhone or iPad with Sill on the same network, or nearby while Direct Wireless Connection is on, can connect to your Mac without pairing, see it and control it, and so can any app on your Mac. The connection is still encrypted. Leave it on unless you trust everyone on your network.</p>
   <!-- Remote Access: take this paragraph out for a release without Remote Access. -->
-  <p>Remote Access lets in only the devices you pair, and you can remove any of them on your Mac.</p>
+  <p>With Remote Access on, the devices you paired can also connect from other networks, through your own VPN or a port you forward on your router.</p>
   <!-- /Remote Access -->
 
   <h2>Update check</h2>
@@ -89,46 +92,41 @@
   <ul>
     <li>For each Mac, the order you put its windows in.</li>
     <li>The names of Mac computers it has seen with Direct Wireless Connection on, so it knows to look for them nearby.</li>
-    <!-- Remote Access: take these two items out for a release without Remote Access. -->
-    <li>Your saved Mac computers for Remote Access: each one’s name, addresses and key.</li>
+    <li>Which parts of the tour of Sill’s controls you have seen, and whether you skipped it, so it shows you only what you haven’t seen.</li>
+    <li>Whether three-finger gestures are on.</li>
+    <li>The Mac computers you paired: each one’s name, key and addresses, and when it last connected.</li>
     <li>This device’s pairing key, in its keychain. The key never leaves the device and isn’t included in backups.</li>
-    <!-- /Remote Access -->
   </ul>
   <h3>On your Mac</h3>
   <ul>
     <li>Sill’s settings.</li>
-    <li>A log of what Sill did, in the Library/Logs/Sill folder in your home folder. It includes window and app names, device names and network addresses. It stays on your Mac unless you send it to someone, and Sill keeps at most two log files of 10 MB each.</li>
-    <!-- Remote Access: take this item out for a release without Remote Access. -->
-    <li>Its Remote Access key and the list of devices you paired, in your login keychain, and when each of them last connected.</li>
-    <!-- /Remote Access -->
+    <li>A log of what Sill did, in the Library/Logs/Sill folder in your home folder. It includes window and app names, the menu items and three-finger gestures chosen from a device, device names and network addresses. It stays on your Mac unless you send it to someone, and Sill keeps at most two log files of 10 MB each.</li>
+    <li>In your Mac’s keychain, in a part that only Sill can read and that is never synced or moved to another Mac: its keys, the devices you paired (each one’s name, model and key, when and how it paired, and for one that connected over a USB cable the code made from its serial number) and whether pairing is required. With Sill’s settings: when each device last connected, and how.</li>
   </ul>
 
   <h2>Permissions</h2>
   <h3>On your Mac</h3>
   <ul>
     <li><strong>Screen Recording</strong>, to show the windows you pick on your iPhone or iPad. Nothing is recorded or saved.</li>
-    <li><strong>Accessibility</strong>, so your iPhone or iPad can click, scroll and type on your Mac, and so Sill can move and size the window it shows.</li>
+    <li><strong>Accessibility</strong>, so your iPhone or iPad can click, scroll and type on your Mac and choose from its menus, and so Sill can move and size the window it shows.</li>
     <li><strong>Local Network</strong>, so your iPhone and iPad can find your Mac.</li>
   </ul>
   <h3>On your iPhone or iPad</h3>
   <ul>
     <li><strong>Local Network</strong>, to find your Mac and connect to it.</li>
-    <!-- Remote Access: take this item out for a release without Remote Access. -->
     <li><strong>Camera</strong>, only to scan the pairing code your Mac shows. Nothing the camera sees is saved or sent.</li>
-    <!-- /Remote Access -->
   </ul>
   <p>You can turn any of these off at any time: in System Settings › Privacy &amp; Security on your Mac, and in Settings › Privacy &amp; Security on your iPhone or iPad.</p>
 
   <h2 id="deleting">Deleting your data</h2>
   <p>The developer holds no data about you, so there is nothing to ask for or delete on the developer’s side. To remove what Sill keeps on your devices:</p>
   <ul>
-    <li>On your iPhone or iPad, delete the Sill app. What it kept goes with it.</li>
-    <!-- Remote Access: take this item out for a release without Remote Access. -->
+    <li>On your iPhone or iPad, delete the Sill app. What it kept goes with it, except that iOS may keep its pairing key in the device’s keychain. On your Mac, remove the device in Sill’s Settings › Devices, and the key no longer lets it in.</li>
     <li>To forget one Mac you paired, touch and hold its row on the connect screen and choose Forget.</li>
-    <!-- /Remote Access -->
     <li>On your Mac, quit Sill and move it to the Trash. Delete the Sill folder in Library/Logs in your home folder. To remove its settings, run <code>defaults delete me.saffer.sill.mac</code> in Terminal.</li>
+    <li>Sill’s keys and the list of devices you paired stay in your Mac’s keychain, where only Sill can read them, so remove each device in Sill’s Settings › Devices before you quit Sill for the last time.</li>
     <!-- Remote Access: take this item out for a release without Remote Access. -->
-    <li>If you used Remote Access, also open Keychain Access and delete the key “Sill Remote Access” and the passwords for “me.saffer.sill.remote”.</li>
+    <li>If you used Remote Access with Sill for Mac 0.3.1 or earlier, also open Keychain Access and delete the key “Sill Remote Access” and the passwords for “me.saffer.sill.remote” in your login keychain.</li>
     <!-- /Remote Access -->
   </ul>
 
