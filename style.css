@@ -149,6 +149,9 @@ code {
 .button:focus-visible { outline-offset: 3px; border-radius: 980px; }
 
 .cta { margin: 28px 0 8px; }
+.badge { margin: 12px 0 4px; }
+.badge img { display: inline-block; width: 180px; height: 60px; vertical-align: middle; }
+.badge a:focus-visible { outline-offset: 4px; }
 
 .card {
   background: var(--card);
