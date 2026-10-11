@@ -130,7 +130,7 @@ code {
 /* Home */
 
 .hero { text-align: center; padding-top: 24px; }
-.hero img { width: 112px; height: 112px; border-radius: 22.5%; }
+.hero > img { width: 112px; height: 112px; border-radius: 22.5%; }
 .hero h1 { font-size: 3rem; margin-top: 16px; }
 .hero .lede { font-size: 1.35rem; margin-bottom: 0; }
 .intro { font-size: 1.1rem; margin-top: 40px; }
@@ -148,7 +148,9 @@ code {
 .button:hover { background: var(--button-hover); text-decoration: none; }
 .button:focus-visible { outline-offset: 3px; border-radius: 980px; }
 
-.cta { margin: 28px 0 8px; }
+.cta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 18px; margin: 28px 0 8px; }
+.cta img { display: block; width: 180px; height: 60px; }
+.cta a:focus-visible { outline-offset: 4px; }
 .badge { margin: 12px 0 4px; }
 .badge img { display: inline-block; width: 180px; height: 60px; vertical-align: middle; }
 .badge a:focus-visible { outline-offset: 4px; }
