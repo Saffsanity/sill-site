@@ -50,7 +50,7 @@
   <h2 id="mac-not-listed">Your Mac isn’t listed</h2>
   <ul>
     <li>Check that Sill is running on your Mac. Its icon is in the menu bar.</li>
-    <li>Put your Mac and your iPhone or iPad on the same Wi-Fi network. Guest networks, and many office and hotel networks, keep devices apart. There, use a USB cable or Direct Wireless Connection.</li>
+    <li>Put your Mac and your iPhone or iPad on the same Wi-Fi network. Guest networks, and many office and hotel networks, keep devices apart. There, use a USB cable or <a href="#direct-wireless">Direct Wireless Connection</a>.</li>
     <li>Connect your iPhone or iPad to your Mac with a USB cable. Your Mac then shows as Wired.</li>
     <li>Check that Local Network is on for Sill on both, as below.</li>
   </ul>
@@ -70,7 +70,7 @@
   <ul>
     <li><strong>Your Mac didn’t show a code.</strong> Choose Pair iPhone or iPad… in the Sill menu on your Mac, then tap your Mac again. After you click Cancel in that window, or after five wrong codes, your Mac waits 10 minutes before it opens the window for that device by itself again.</li>
     <li><strong>Your iPhone or iPad asks you to unlock your Mac.</strong> Your Mac pairs a device only while it’s unlocked.</li>
-    <li><strong>Your iPhone or iPad says Update Sill beside your Mac.</strong> Your Mac has Sill for Mac 0.3.1 or earlier, from before pairing. Update it: <a href="download.html">download the newest version</a>, or choose the item in the Sill menu that says a newer version is available.</li>
+    <li><strong>Your iPhone or iPad says Update Sill beside your Mac.</strong> Your Mac has Sill for Mac 0.3.1 or earlier, from before pairing at home. Update it: <a href="download.html">download the newest version</a>, or choose the item in the Sill menu that says a newer version is available.</li>
     <li><strong>The Sill menu on your Mac says An iPhone or iPad Needs Sill Updated.</strong> An iPhone or iPad with an older Sill tried to connect. Update Sill on it.</li>
     <li><strong>Your iPhone or iPad says your Mac removed it.</strong> It was removed in Sill’s Settings › Devices on your Mac. Tap your Mac to pair it again.</li>
   </ul>
@@ -80,7 +80,7 @@
   <p>Direct Wireless Connection lets an iPhone or iPad near your Mac connect without a shared Wi-Fi network, the way AirDrop does.</p>
   <ul>
     <li>Turn it on in the Sill menu on your Mac, or in Sill’s settings under General.</li>
-    <li>If your Mac isn’t listed on your iPhone or iPad, tap Search Nearby. Your Mac then shows as Direct.</li>
+    <li>If nothing is listed on your iPhone or iPad, tap Search Nearby. Your Mac then shows as Direct.<!-- Remote Access: take this out for a release without Remote Access. --> An iPhone or iPad you already paired lists your Mac as Remote instead, with no Search Nearby: it looks for your Mac nearby by itself only if Direct Wireless Connection was on the last time the two connected on the same network or over a USB cable (a connection through a VPN doesn’t count). If it wasn’t, connect them once over a USB cable while it’s on, then unplug.<!-- /Remote Access --></li>
     <li>Leave it off when your devices share a network. While it’s on, the Wi-Fi on your Mac keeps stepping away from its network, and streams over Wi-Fi can stutter.</li>
     <li>While it’s on, anyone nearby with Sill can find your Mac. Only devices you paired can connect, unless you turn off Require pairing.</li>
   </ul>
@@ -89,13 +89,13 @@
   <h2 id="remote-access">Remote Access</h2>
   <p>Remote Access lets you use your Mac away from home, through your own VPN, such as Tailscale, or through a port you forward on your router. Only devices you paired can connect this way, and the connection is encrypted. Away from home, Sill starts at a lower quality that a slower connection can carry, and your iPhone or iPad tells you when the connection can’t keep up. When you get home, the session moves to your network by itself.</p>
   <ol>
-    <li>On your Mac, choose Remote Access… in the Sill menu and turn on Remote Access.</li>
+    <li>On your Mac, choose Remote Access… in the Sill menu and turn on Remote Access. For a port you forward on your router instead of a VPN, also turn on Allow connections from the internet there, and forward the port it names.</li>
     <li>Pair each iPhone or iPad once, at home (above), and connect it to your Mac at home once while Remote Access is on: that is how it learns where to find your Mac from other networks. A device that has never connected at home: on your Mac, choose Pair iPhone or iPad… in the Sill menu, then on your device, tap Add a Mac… and point it at the code.</li>
     <li>Away from home, turn on your VPN on your device and tap your Mac.</li>
   </ol>
   <p>If it doesn’t connect:</p>
   <ul>
-    <li>Your Mac has to be awake, with Sill running and its VPN on. Sill can’t wake a sleeping Mac. To keep it reachable, stop it from sleeping in System Settings › Energy, or Battery on a laptop.</li>
+    <li>Your Mac has to be awake, with Sill running and its VPN on. Sill can’t wake a sleeping Mac. To keep it reachable, stop it from sleeping in System Settings › Energy (Energy Saver on macOS 14), or Battery on a laptop.</li>
     <li>Check that your VPN is on on your iPhone or iPad too.</li>
     <li>If your iPhone or iPad says your Mac didn’t answer although your Mac is awake, connect them at home once with Remote Access on, then try again away.</li>
     <li>If your device says your Mac no longer accepts it, it was removed on your Mac. Pair it again.</li>
@@ -104,7 +104,7 @@
 
   <h2 id="stutter">The picture stutters or lags</h2>
   <ul>
-    <li>Pick a lower Quality in the Sill menu on your Mac, or in the settings panel on your iPhone or iPad.</li>
+    <li>Pick a lower Quality in the settings panel on your iPhone or iPad, or in the Sill menu on your Mac.<!-- Remote Access: take this sentence out for a release without Remote Access. --> Away from home, Sill streams at a quality of its own, which the Sill menu doesn’t change: lower it in the settings panel on your iPhone or iPad, tap the quality it suggests when the connection can’t keep up, or set it in Sill’s Settings › Streaming under Away from home.<!-- /Remote Access --></li>
     <li>Use a USB cable, or 5 GHz Wi-Fi.</li>
     <li>Turn off Direct Wireless Connection if you don’t need it.</li>
   </ul>
