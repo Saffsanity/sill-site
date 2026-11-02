@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Sill: the Mac’s Weather window on an iPhone and an iPad">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css?v=2026-10-10">
+<link rel="stylesheet" href="style.css?v=2026-11-02">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -44,15 +44,43 @@
   </ol>
   <p>In Sill’s settings, Permissions has buttons that open these pages for you.</p>
 
+  <h2 id="black-picture">The picture is black</h2>
+  <p>If your Mac’s windows show black on your iPhone or iPad, thumbnails too, your Mac’s display is probably asleep: macOS draws nothing new while it is. Wake it at your Mac with a key or the mouse, and the picture comes back.</p>
+  <p>To use Sill from another room, keep the display on longer: on your Mac, open System Settings › Lock Screen and choose when the display turns off when inactive. To keep your Mac itself awake, stop it from sleeping by itself in System Settings › Energy (Energy Saver on macOS 14), or Battery on a laptop.</p>
+  <p>Sill for Mac wakes your Mac’s display when your iPhone or iPad connects, and keeps it on while you use your Mac from the device, the way using your Mac does. Left alone, the display turns off by your Mac’s own setting and the picture goes black. To wake it again, move the pointer, scroll, or press the Command key on a keyboard attached to your iPhone or iPad: a tap wakes it too, but clicks your Mac where you can’t see, and Shift alone doesn’t reach your Mac. Sill can’t wake a Mac that’s asleep, or turn on the display of a laptop with its lid closed.</p>
+  <h2 id="locked">Your Mac is locked</h2>
+  <p>While your Mac is locked, Sill shows none of it on your iPhone or iPad: the picture is your Mac’s own lock screen, and the Apps list, your Mac’s menus, its sound and the clipboard wait. Unlock your Mac and its windows come back. While your Mac is at its login window or switched to another user, Sill shows “Another user started controlling this Mac. Log in to your account to reactivate screen sharing with Sill.” Nothing you tap or type on your iPhone or iPad reaches your Mac until you log in on it.</p>
+
   <h2 id="accessibility">Taps and typing don’t reach your Mac</h2>
   <p>Sill needs Accessibility to click, scroll and type for you. On your Mac, open System Settings › Privacy &amp; Security › Accessibility and turn on Sill. It works right away.</p>
+
+  <h2 id="keyboard">Using a keyboard or trackpad with your iPhone or iPad</h2>
+  <p>With a keyboard attached to your iPhone or iPad, such as a Magic Keyboard, what you type goes to your Mac as soon as its picture shows, Esc and shortcuts included. You don’t need the Keyboard button. It brings up your device’s keyboard bar, and from there the on-screen keyboard. While Sill’s settings, the Apps list or the tour is open, your keys stay with it, so Esc closes the settings or skips the tour.</p>
+  <p>Over the picture, two fingers on the trackpad scroll the window under the pointer, and so does a mouse’s scroll wheel.</p>
+  <p>In Terminal, iTerm2 and other terminal apps on your Mac, Control-[ types the same as Esc.</p>
+  <p>To type in Chinese, Japanese, Korean or another language whose input method composes text, use the keyboards you set up on your iPhone or iPad in Settings › General › Keyboard. You compose and pick from the candidates on your device, and what you pick is typed on your Mac. Dictation types on your Mac too, in the languages you set up for it. With keyboards in two or more languages, Control-Space switches between them on your device; with one, it goes to your Mac.</p>
+
+  <h2 id="scrolling">Scrolling the other way</h2>
+  <p>Dragging a finger over the picture scrolls what’s under it the way your finger moves, as it does on your iPhone or iPad, and so do two fingers on the trackpad below the picture when you hold the device upright. To turn both around, turn on Reverse Scrolling under This iPad (This iPhone on iPhone) in the settings panel on your iPhone or iPad. A trackpad or mouse connected to your iPad keeps scrolling the way its Natural Scrolling setting says, in Settings on your iPad.</p>
+  <p>Pinch the picture with two fingers to zoom it, up to five times, around the point between your fingers. While it’s zoomed, two fingers move it and one finger still taps, clicks and scrolls on your Mac, on what you see under it. Pinch all the way out to see the whole picture again. Zooming happens on your iPhone or iPad only: your Mac’s window stays as it is.</p>
+  <h2 id="window-controls">Closing, minimizing or moving a window</h2>
+  <p>Touch and hold a window’s thumbnail in Sill’s bar: after half a second, its close, minimize and full-screen buttons show beside it. Keep holding and drag to move the thumbnail to another place in the bar. To hold longer or shorter, from 0.2 to 2 seconds, use Hold to Show Window Controls under This iPad (This iPhone on iPhone) in the settings panel on your iPhone or iPad.</p>
+
+  <h2 id="tour">The tour of Sill’s controls</h2>
+  <p>The first time your iPhone or iPad shows your Mac’s picture, if you leave it alone for a second, a short tour points out Sill’s controls one at a time. Skip ends it. Take the Tour, at the bottom of the settings panel, shows it again whenever you like.</p>
+  <p>After an update that adds controls, the tour shows once more, with what’s new marked New, even if you skipped it before.</p>
 
   <h2 id="mac-not-listed">Your Mac isn’t listed</h2>
   <ul>
     <li>Check that Sill is running on your Mac. Its icon is in the menu bar.</li>
+    <li>If your Mac restarted, Sill opens only once someone logs in to it. To have Sill open by itself then, choose Launch at Login in the Sill menu, or turn it on in Sill’s Settings › General.</li>
+    <li>Your Mac may be asleep. Your iPhone or iPad then doesn’t list it, or says it isn’t answering. Wake your Mac, then tap it on your iPhone or iPad if Sill doesn’t connect by itself. Sill may not be able to wake your Mac, so while you use Sill from another room, stop your Mac from sleeping by itself in System Settings › Energy (Energy Saver on macOS 14), or Battery on a laptop.</li>
     <li>Put your Mac and your iPhone or iPad on the same Wi-Fi network. Guest networks, and many office and hotel networks, keep devices apart. There, use a USB cable or <a href="#direct-wireless">Direct Wireless Connection</a>.</li>
     <li>Connect your iPhone or iPad to your Mac with a USB cable. Your Mac then shows as Wired.</li>
     <li>Check that Local Network is on for Sill on both, as below.</li>
+    <li class="command">If your iPhone or iPad lists your Mac but can’t connect to it, and the firewall is on in System Settings › Network › Firewall on your Mac, the firewall may be blocking Sill even though it shows Sill as allowed: it can keep one rule for Sill and another for the program inside it. To unblock that program, open Terminal on your Mac, run <code>sudo /usr/libexec/ApplicationFirewall/socketfilterfw <span class="option">--unblockapp</span> /Applications/Sill.app/Contents/MacOS/Sill</code> and enter your Mac’s password.
+    Sill for Mac says so in its menu, as Devices Can’t Connect, and in its Settings › General, with the command to copy.
+    </li>
   </ul>
 
   <h2 id="local-network">Local Network is off</h2>
@@ -62,13 +90,14 @@
   <h2 id="pairing">Pairing your iPhone or iPad</h2>
   <p>Each iPhone or iPad pairs with your Mac once. After that, only the devices you paired can connect, and every connection is encrypted.</p>
   <ol>
-    <li>On your iPhone or iPad, tap your Mac. Its row says Not paired.</li>
+    <li>On your iPhone or iPad, tap your Mac. It says Not paired.</li>
     <li>Your Mac opens a window with a code. Point your iPhone or iPad at it, or tap Enter Code Instead and type the 12 digits.</li>
   </ol>
   <p>Over a USB cable, your Mac shows as Wired. Tap it, and the device pairs by itself, with no code, while your Mac is unlocked.</p>
   <p>If it doesn’t work:</p>
   <ul>
     <li><strong>Your Mac didn’t show a code.</strong> Choose Pair iPhone or iPad… in the Sill menu on your Mac, then tap your Mac again. After you click Cancel in that window, or after five wrong codes, your Mac waits 10 minutes before it opens the window for that device by itself again.</li>
+    <li><strong>You use your Mac through Screen Sharing or another remote desktop app, and the code doesn’t show there.</strong> Turn on Show the pairing window to screen sharing in Sill’s Settings › Devices on your Mac; while it’s on, anyone who can see your Mac’s screen remotely can read the code.</li>
     <li><strong>Your iPhone or iPad asks you to unlock your Mac.</strong> Your Mac pairs a device only while it’s unlocked.</li>
     <li><strong>Your iPhone or iPad says Update Sill beside your Mac.</strong> Your Mac has Sill for Mac 0.3.1 or earlier, from before pairing at home. Update it: <a href="download.html">download the newest version</a>, or choose the item in the Sill menu that says a newer version is available.</li>
     <li><strong>The Sill menu on your Mac says An iPhone or iPad Needs Sill Updated.</strong> An iPhone or iPad with an older Sill tried to connect. Update Sill on it.</li>
@@ -79,7 +108,7 @@
   <h2 id="direct-wireless">Direct Wireless Connection</h2>
   <p>Direct Wireless Connection lets an iPhone or iPad near your Mac connect without a shared Wi-Fi network, the way AirDrop does.</p>
   <ul>
-    <li>Turn it on in the Sill menu on your Mac, or in Sill’s settings under General.</li>
+    <li>Turn it on in the Sill menu on your Mac, or in Sill’s settings under General. An iPhone or iPad you paired can also turn it on or off in its settings panel<!-- Remote Access: take this out for a release without Remote Access. -->, but not while it’s connected through Remote Access<!-- /Remote Access -->.</li>
     <li>If nothing is listed on your iPhone or iPad, tap Search Nearby. Your Mac then shows as Direct.<!-- Remote Access: take this out for a release without Remote Access. --> An iPhone or iPad you already paired lists your Mac as Remote instead, with no Search Nearby: it looks for your Mac nearby by itself only if Direct Wireless Connection was on the last time the two connected on the same network or over a USB cable (a connection through a VPN doesn’t count). If it wasn’t, connect them once over a USB cable while it’s on, then unplug.<!-- /Remote Access --></li>
     <li>Leave it off when your devices share a network. While it’s on, the Wi-Fi on your Mac keeps stepping away from its network, and streams over Wi-Fi can stutter.</li>
     <li>While it’s on, anyone nearby with Sill can find your Mac. Only devices you paired can connect, unless you turn off Require pairing.</li>
@@ -102,6 +131,33 @@
   </ul>
   <!-- /Remote Access -->
 
+  <h2 id="virtual-display">A window left your Mac’s screen</h2>
+  <p>While Virtual Display is on in Sill for Mac, the window your iPhone or iPad shows moves onto a display of its own, an invisible screen sized for your device, so it keeps updating when other windows cover it. It comes back where it was when you switch to another window or to the Desktop, disconnect, or quit Sill. To keep your windows on your Mac’s screen, turn off Virtual Display in the Sill menu or in Sill’s Settings › Virtual Display. If Sill for Mac stopped without quitting, for example after Force Quit, macOS puts the window back on your screen, though not always where it was.</p>
+  <p>Virtual Display is on unless you turn it off.</p>
+
+  <h2 id="window-size">A window on your Mac changed size</h2>
+  <p>When you change the text size with Aa on your iPhone or iPad, Sill resizes the window you’re using on your Mac to fit your device, unless Virtual Display is on, and keeps it at that size while you use it. When you switch to another window or to the Desktop, disconnect, or quit Sill, the window goes back to the size and place it had. With more than one device connected, it goes back when the last one disconnects.</p>
+  <p>Aa starts at Off, which leaves the window as it is. Slide Aa all the way to the left, to Off, and the window goes back to its own size and place right away. While the window is on Sill’s virtual display (Virtual Display on), Aa has no Off: there the window always fits your device. Aa sizes a window, so it’s dimmed while the Desktop is showing.</p>
+  <ul>
+    <li>If you moved the window on your Mac meanwhile, it keeps its new place and gets its size back.</li>
+    <li>A window that’s full screen when you stop stays as it is. When it leaves full screen it keeps the size Sill gave it; resize it yourself.</li>
+    <li>If Sill for Mac stopped without quitting, for example after Force Quit, resize the window yourself.</li>
+  </ul>
+
+  <h2 id="clipboard">Copy and paste between your Mac and your iPhone or iPad</h2>
+  <p>While Share Clipboard is on, text you copy on your Mac while your iPhone or iPad is connected is ready to paste on the device. To paste on your Mac what you copied on your iPhone or iPad, come back to Sill and tap Paste, on the note by Sill’s bar or in the settings panel: the text goes where your Mac’s cursor is, as if you had pressed ⌘V there. If you’d rather press ⌘V yourself, turn off Paste on … Right Away (the switch names your Mac), under Share Clipboard in the settings panel: Paste then only puts the text on your Mac’s clipboard. Sill never reads your iPhone or iPad’s clipboard by itself.</p>
+  <ul>
+    <li>Both apps have the switch: Share clipboard with devices in Sill’s Settings › General on your Mac, and Share Clipboard in the settings panel on your iPhone or iPad.</li>
+    <li>Only text goes, up to 256 KB at a time, and only what you copy while a device is connected. Text that came to your Mac from another of your devices through Universal Clipboard stays on your Mac; a password manager’s copies go like any other.</li>
+    <li>Text from your Mac stays on your iPhone or iPad’s clipboard for 10 minutes.</li>
+    <li>Paste presses ⌘ with the key that is V on a U.S. keyboard. If your Mac uses a keyboard layout that puts V somewhere else for shortcuts, such as Dvorak, turn off Paste on … Right Away and press ⌘V yourself.</li>
+    <li>If nothing arrives, update Sill on both: an older Sill on either side doesn’t share the clipboard.</li>
+    <li>If what you copy on your Mac doesn’t arrive, look under Share clipboard with devices in Sill’s Settings › General on your Mac. When macOS asks before apps read the clipboard, Sill says so there and takes you to where you allow it: Paste from Other Apps, in System Settings › Privacy & Security.</li>
+  </ul>
+
+  <h2 id="sound">Sound from your Mac (beta)</h2>
+  <p>Sound is a beta, on by default. To turn it off or on: on your Mac, choose Send Audio (Beta) in the Sill menu, or in Sill’s Settings › Streaming; or on your iPhone or iPad, Send Audio in Sill’s settings panel. Either way it is on or off for every connected iPhone or iPad, which plays the sound of what it shows, the window’s app or every app for the Desktop, a moment behind the picture, and your Mac keeps playing it too. To silence it on one device, turn on Mute in that device’s settings panel. It plays when your iPhone or iPad is set to silent, as a video does, and unplugging headphones mutes it. AirPods and other Bluetooth headphones add a delay of their own, about a fifth of a second, so the sound trails the picture a little more. If you hear nothing, update Sill on both: an older Sill on either side has no sound.</p>
+
   <h2 id="stutter">The picture stutters or lags</h2>
   <ul>
     <li>Pick a lower Quality in the settings panel on your iPhone or iPad, or in the Sill menu on your Mac.<!-- Remote Access: take this sentence out for a release without Remote Access. --> Away from home, Sill streams at a quality of its own, which the Sill menu doesn’t change: lower it in the settings panel on your iPhone or iPad, tap the quality it suggests when the connection can’t keep up, or set it in Sill’s Settings › Streaming under Away from home.<!-- /Remote Access --></li>
@@ -109,8 +165,18 @@
     <li>Turn off Direct Wireless Connection if you don’t need it.</li>
   </ul>
 
+  <h2 id="larger-picture">The picture is small on your iPhone</h2>
+  <p>Held upright, your iPhone shows the picture at the top, with buttons, keys and a trackpad below it. To make the picture of a window larger, tap Settings under the picture, turn on Larger Picture under This iPhone, and close Settings. While a window is on screen, its picture then takes the place of the window thumbnails and reaches down to where the keyboard comes up.</p>
+  <ul>
+    <li>Switch windows with Apps: tap an open app again for its next window. The Menus button lists the windows too, in the Window menu of most apps.</li>
+    <li>Closing, minimizing and full screen, which you reach by holding a thumbnail, go with the thumbnails: use the app’s own menus behind the Menus button instead.</li>
+    <li>Until you set a window’s text size with Aa, it keeps its own shape. Then your Mac makes it as tall as the picture. With Virtual Display on, your Mac does that by itself.</li>
+    <li>The Desktop keeps the usual layout, with the thumbnails: your Mac’s screen keeps its shape, so a taller picture would only add black below it.</li>
+    <li>On iPhone Duo, Larger Picture isn’t there: the cover display keeps its layout. With Display Zoom on, some iPhones have no room for a larger picture, and it isn’t there either.</li>
+  </ul>
+
   <h2 id="log">Sending a log</h2>
-  <p>A log helps with problems that aren’t listed here. On your Mac, choose Show Log… in the Sill menu, or open the Sill folder in Library/Logs in your home folder. The log lists your window names, device names and network addresses, so read it before you send it.</p>
+  <p>A log helps with problems that aren’t listed here. On your Mac, choose Show Log… in the Sill menu, or open the Sill folder in Library/Logs in your home folder. The log lists your window names, device names and network addresses, never what you copy, so read it before you send it.</p>
 </main>
 
 <footer class="site-footer">

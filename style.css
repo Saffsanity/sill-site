@@ -126,6 +126,10 @@ code {
 }
 /* A SHA-256 is 64 characters with no spaces: let it wrap on a phone instead of widening the page. */
 .hash code { overflow-wrap: anywhere; word-break: break-all; }
+/* A Terminal command's long paths: wrapped at its spaces, and inside a path only where one is wider than the page;
+   never inside an option, which a hyphen would split ("--" over "unblockapp"). */
+.command code { overflow-wrap: anywhere; }
+.command .option { white-space: nowrap; }
 
 /* Home */
 
