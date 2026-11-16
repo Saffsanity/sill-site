@@ -33,9 +33,15 @@
 <main>
   <h1>Support</h1>
   <p class="lede">Most problems have a quick fix below. If yours doesn’t, email <!--email_off--><a href="mailto:support@getsill.app">support@getsill.app</a><!--/email_off-->. Say which Mac and which iPhone or iPad you use, their system versions, and what happened.</p>
+  <p>Sill’s versions help too. Your iPhone or iPad shows its version at the bottom of the screen that lists your Macs, and at the bottom of the settings panel while you stream; touch and hold it to copy it. Your Mac shows its version at the bottom of Sill’s Settings, under General.</p>
   <p>You can also report a problem on <a href="https://github.com/Saffsanity/sill/issues">GitHub</a>.</p>
   <p>Need Sill for Mac? <a href="download.html">Download it here</a>.</p>
 
+  <h2 id="updates">Updating Sill for Mac</h2>
+  <p>From Sill for Mac 0.6.2 on: when a newer Sill for Mac is out, Sill’s Settings › General offers Update Now, and the Sill menu says so. Update Now downloads the new version from GitHub, checks it, puts it in place of the copy you have and restarts Sill. If an iPhone or iPad is connected, Sill asks first, since restarting disconnects it.</p>
+  <p>To have Sill do this by itself, turn on <strong>Automatically update Sill</strong> under Check for updates automatically (it is off unless you turn it on). Sill then downloads a new version two days after it first finds it, waits until no iPhone or iPad has been connected for 5 minutes, and installs it; it never disconnects anyone. If the new version doesn’t start properly, Sill puts the one you had back and starts it, and tries again after its next daily check, two times at most.</p>
+  <p>Either way, Sill installs a new version only if it passes two checks: Apple’s signature and notarization for Sill’s developer, and the release signed with Sill’s own update key. If Settings says an update failed, it names the check that failed; your Sill stays as it was. You can always <a href="download.html">download the newest version</a> instead.</p>
+  <p>To try each new version first, turn on <strong>Use nightly builds</strong> in Sill’s Settings › General (it is off unless you turn it on). Sill then also offers the nightly build, which GitHub builds and signs every night from Sill’s newest code, with nobody looking at it first: tested less than a release, so it can break. Sill tells you when one is out, and Update Now installs it: a nightly never installs by itself, even with Automatically update Sill on, which installs releases only. Turning nightly builds off doesn’t go back: Sill keeps the nightly you have until a release that is at least as new is out, which can be the release that nightly led up to. Sill for iPhone and iPad isn’t affected, and connects to a Mac on a nightly as to a release.</p>
   <h2 id="screen-recording">Sill can’t see your windows</h2>
   <p>The Sill menu on your Mac says Screen Recording Is Off, or your iPhone or iPad connects but shows no windows.</p>
   <ol>
@@ -137,6 +143,9 @@
   <p>While Virtual Display is on in Sill for Mac, the window your iPhone or iPad shows moves onto a display of its own, an invisible screen sized for your device, so it keeps updating when other windows cover it. It comes back where it was when you switch to another window or to the Desktop, disconnect, or quit Sill. To keep your windows on your Mac’s screen, turn off Virtual Display in the Sill menu or in Sill’s Settings › Virtual Display. If Sill for Mac stopped without quitting, for example after Force Quit, macOS puts the window back on your screen, though not always where it was.</p>
   <p>Virtual Display is on unless you turn it off.</p>
 
+  <h2 id="screens">More than one screen on your Mac</h2>
+  <p>On a Mac with more than one screen, tap Desktop while it shows to step to the next screen, starting from your main one. The button shows which screen is up: Desktop 1 is your main screen, the one with the menu bar, then each screen to its right as they sit in System Settings › Displays, and the dots under it show how many there are. Sill keeps the screen you chose while your iPhone or iPad is connected, and for half a minute after, so a reconnect comes back to it. While your Mac is locked, the Desktop shows your main screen, and the screen you chose comes back once it’s unlocked. Update Sill on both to step through your screens: with an older Sill on either side, the Desktop shows one screen.</p>
+
   <h2 id="window-size">A window on your Mac changed size</h2>
   <p>When you change the text size with Aa on your iPhone or iPad, Sill resizes the window you’re using on your Mac to fit your device, unless Virtual Display is on, and keeps it at that size while you use it. When you switch to another window or to the Desktop, disconnect, or quit Sill, the window goes back to the size and place it had. With more than one device connected, it goes back when the last one disconnects.</p>
   <p>Aa starts at Off, which leaves the window as it is. Slide Aa all the way to the left, to Off, and the window goes back to its own size and place right away. While the window is on Sill’s virtual display (Virtual Display on), Aa has no Off: there the window always fits your device. Aa sizes a window, so it’s dimmed while the Desktop is showing.</p>
@@ -175,6 +184,22 @@
     <li>Until you set a window’s text size with Aa, it keeps its own shape. Then your Mac makes it as tall as the picture. With Virtual Display on, your Mac does that by itself.</li>
     <li>The Desktop keeps the usual layout, with the thumbnails: your Mac’s screen keeps its shape, so a taller picture would only add black below it.</li>
     <li>On iPhone Duo, Larger Picture isn’t there: the cover display keeps its layout. With Display Zoom on, some iPhones have no room for a larger picture, and it isn’t there either.</li>
+  </ul>
+
+  <h2 id="full-screen">Hiding Sill’s controls</h2>
+  <p>To give your Mac’s picture the whole screen, open Sill’s settings panel while you stream and tap Full Screen. Sill’s controls hide, and only the picture shows. To bring them back, swipe in from the left edge of the screen, or shake your iPhone or iPad: Shake to Show Controls is under Full Screen in the settings panel, and is on unless you turn it off. While the controls are hidden, a drag that starts at the left edge and goes right brings them back and doesn’t reach your Mac.</p>
+  <ul>
+    <li>The controls come back by themselves when they have something to show you: your Mac locks, the window you were using closes, or the connection can’t keep up.</li>
+    <li>With a trackpad or mouse connected to your iPad, rest the pointer at the left edge for a moment. With VoiceOver, use the Show Controls action or the escape gesture.</li>
+    <li>On an iPad, Full Screen works while Sill fills the screen, not beside another app or in a smaller window.</li>
+  </ul>
+
+  <h2 id="picture-in-picture">Watching your Mac while you use another app</h2>
+  <p>Turn on Picture in Picture in Sill’s settings panel, under This iPad or This iPhone. When you then leave Sill while your Mac’s picture shows, the picture keeps playing in a small window over your other apps, with your Mac’s sound when Send Audio is on. Tap the window’s button to come back to Sill.</p>
+  <ul>
+    <li>It is for watching: nothing you tap or type in other apps reaches your Mac.</li>
+    <li>It is off unless you turn it on, and it needs Start PiP Automatically turned on in Settings › General › Picture in Picture on your iPhone or iPad.</li>
+    <li>A picture you pause ends by itself after 10 minutes, so a paused window doesn’t keep your Mac streaming.</li>
   </ul>
 
   <h2 id="log">Sending a log</h2>

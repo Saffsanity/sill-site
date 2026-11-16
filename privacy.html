@@ -32,7 +32,7 @@
 
 <main>
   <h1>Privacy Policy</h1>
-  <p class="muted">Last updated November 11, 2026</p>
+  <p class="muted">Last updated November 16, 2026</p>
 
   <p class="lede">Sill collects nothing. There is no account and no server: your screen, what you type and what you copy travel only between your own devices, and Sill never sends anything about you to the developer.</p>
 
@@ -102,7 +102,9 @@
   <!-- /Remote Access -->
 
   <h2>Update check</h2>
-  <p>Sill for Mac checks for updates. Unless you turn off “Check for updates automatically” in Sill’s Settings › General, once a day it asks GitHub (api.github.com) whether a newer version of Sill has been released, and again whenever you click Check Now. Like any visit to a website, that request shows GitHub the IP address of your Mac, and it says which version of Sill you have (for example “Sill/1.0”) and gives a fixed “en” as its language. Sill sends nothing else: no identifiers, no cookies, nothing about your devices or what you stream. The developer receives nothing from these checks; GitHub’s privacy statement covers what GitHub keeps. Sill never downloads or installs anything by itself.</p>
+  <p>Sill for Mac checks for updates. Unless you turn off “Check for updates automatically” in Sill’s Settings › General, once a day it asks GitHub (api.github.com) whether a newer version of Sill has been released, and again whenever you click Check Now. Like any visit to a website, that request shows GitHub the IP address of your Mac, and it says which version of Sill you have (for example “Sill/1.0”) and gives a fixed “en” as its language. Sill sends nothing else: no identifiers, no cookies, nothing about your devices or what you stream. The developer receives nothing from these checks; GitHub’s privacy statement covers what GitHub keeps.</p>
+  <p>From Sill for Mac 0.6.2 on: when you click Update Now, or when Automatically update Sill is on and a new version is out, Sill downloads the new version from GitHub (api.github.com, github.com and GitHub’s file server, release-assets.githubusercontent.com): its release details, a small file that says which download is genuine (and, if one is published, a small file that stops a release from being installed), and the app itself. Those requests show GitHub the IP address of your Mac and the same version and language as the update check, and nothing else. Sill checks the download on your Mac two ways, Apple’s signature and notarization for Sill’s developer and the release signed with Sill’s own update key, and installs it in place of the copy you have; macOS may check its signature with Apple, as it does for any app. Nothing is downloaded or installed until you click, unless you turn on Automatically update Sill (it is off unless you do). Whether it is on, which updates Sill tried by itself, and when it first found each, are kept on your Mac in Sill’s own keychain item, and nowhere else.</p>
+  <p>If you turn on Use nightly builds (it is off unless you do), Sill also asks GitHub for the nightly pre-release and its small signed file that says which nightly download is genuine: when you turn it on, with each daily check, and each time Sill opens while “Check for updates automatically” is on. Those requests show GitHub the same as the update check, and nothing else.</p>
   <p>The iPhone and iPad app checks for nothing: the App Store updates it. It does tell your Mac which version of Sill it runs when it connects, so that your Mac can say when the app needs an update to keep working with it.</p>
 
   <h2>What stays on your devices</h2>
@@ -118,6 +120,7 @@
     <li>Whether Share Clipboard and Paste on … Right Away (Paste pastes where your Mac’s cursor is) are on, and a count that tells Sill whether you copied something new since it last sent or received text, never what you copied. Text your Mac sends stays on the device’s clipboard for 10 minutes, and Universal Clipboard does not pass it to your other devices.</li>
     <li>Whether Reverse Scrolling is on.</li>
     <li>How long you hold a window’s thumbnail before its controls show.</li>
+    <li>Whether Picture in Picture and Shake to Show Controls are on, and how many times Sill has shown its hint for bringing its controls back, so it shows it only the first few times.</li>
     <li>On iPhone Duo, how tall each keyboard you use is when the iPhone is half open, with the keyboard’s language, so Sill can place its keys as soon as that keyboard comes up.</li>
     <li>The Mac computers you paired: each one’s name, key and addresses, and when it last connected.</li>
     <li>A small picture of each paired Mac’s screen as your last session with it ended, for its tile: Sill shows your Mac computers as tiles unless you choose the list, and takes no picture while the list shows. It stays on the device, can’t be read while the device is locked and isn’t in backups. Switching to the list hides the pictures and keeps them for when you show tiles again; a picture is deleted when you remove it, forget the Mac or delete Sill. Whether you chose the list, and any group names you give your Mac computers, are kept on the device too.</li>
